@@ -3,47 +3,7 @@
 <head>
   <meta charset='utf-8'>
   <title>Jason's Cube</title>
-  <style>
-    body {
-      margin: 0;
-      background: #1a2f2a;
-      padding: 0 32px 32px 287px;
-      font-family: "Lucida Console", monospace;
-      color: white;
-    }
-    h3 {
-      margin: 0;
-      padding: 1em 0 0.75em;
-      font-size: 1.25em;
-    }
-    ul {
-      margin: -3px;
-      padding: 0;
-      list-style: none;
-    }
-    li {
-      float: left;
-      margin: 3px;
-    }
-    li[data-checked="false"] {
-      opacity: 0.5;
-    }
-    img {
-      display: block;
-      width: 92px;
-      height: 128px;
-      border-radius: 4px;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-    }
-    #large-card {
-      position: fixed;
-      left: 32px;
-      top: 57px;
-      width: 223px;
-      height: 310px;
-      border-radius: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="Jstyle.css">
 </head>
 <body>
   <img id="large-card" alt="placeholder" src="http://gatherer.wizards.com/Handlers/Image.ashx?name=xxx&type=card">
@@ -330,7 +290,7 @@
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Jace%2C%20the%20Mind%20Sculptor"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Jace%2C%20the%20Mind%20Sculptor&amp;set=EMA&amp;type=card" alt="Jace, the Mind Sculptor"></a></li>
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Leyline%20of%20Anticipation"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Leyline%20of%20Anticipation&amp;set=M11&amp;type=card" alt="Leyline of Anticipation"></a></li>
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Opposition"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Opposition&amp;set=CG&amp;type=card" alt="Opposition"></a></li>
-    <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Arcane%20Savant"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Arcane%20Savant&amp;set=CN2&amp;type=card" alt="Arcane Savant"></a></li>
+    <li data-checked="false"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Arcane%20Savant"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Arcane%20Savant&amp;set=CN2&amp;type=card" alt="Arcane Savant"></a></li>
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Deepglow%20Skate"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Deepglow%20Skate&amp;set=C16&amp;type=card" alt="Deepglow Skate"></a></li>
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Docent%20of%20Perfection"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Docent%20of%20Perfection&amp;set=EMN&amp;type=card" alt="Docent of Perfection"></a></li>
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Icefall%20Regent"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Icefall%20Regent&amp;set=DTK&amp;type=card" alt="Icefall Regent"></a></li>
@@ -722,33 +682,6 @@
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Broodmate%20Dragon"><img src="http://magiccards.info/scans/en/mbp/19.jpg" alt="Broodmate Dragon"></a></li>
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Scion%20of%20the%20Ur-Dragon"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Scion%20of%20the%20Ur-Dragon&amp;set=TSP&amp;type=card" alt="Scion of the Ur-Dragon"></a></li>
   </ul>
-  <script>
-    (function() {
-      'use strict';
-
-      var repeat = function(n, s) { return new Array(n + 1).join(s); };
-      var counts = [];
-      var output = '\n';
-      var nodeList = document.getElementsByTagName('h3');
-      for (var idx = 0; idx < nodeList.length; idx += 1) {
-        var left = nodeList[idx].textContent + ' ';
-        var right = ' ' + (counts[counts.length] = nodeList[idx].nextElementSibling.getElementsByTagName('li').length);
-        output += left + repeat(20 - left.length - right.length, '.') + right + '\n';
-      }
-      var total = String(counts.reduce(function(a, b) { return a + b; }, 0));
-      output += repeat(20, '=') + '\n';
-      output += repeat(20 - total.length, ' ') + total + '\n';
-      output += '\n';
-      console.log(output);
-
-      var largeCard = document.getElementById('large-card');
-      document.body.addEventListener('mouseover', function(event) {
-        if (event.target.tagName === 'IMG') {
-          largeCard.alt = event.target.alt;
-          largeCard.src = event.target.src;
-        }
-      }, false);
-    }());
-  </script>
+  <script src="Jscripts.js"></script>
 </body>
 </html>
