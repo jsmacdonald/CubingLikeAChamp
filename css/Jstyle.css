@@ -119,6 +119,7 @@ img {
 
 #search-results {
   display: inline-block;
+  overflow: auto;
   height: 360px;
   width: 62%;
   position: absolute;

@@ -3,9 +3,36 @@
 <head>
   <meta charset='utf-8'>
   <title>Jason's Cube</title>
-  <link rel="stylesheet" href="Jstyle.css">
+  <link rel="stylesheet" href="css/Jstyle.css">
 </head>
 <body>
+  <div id="search-popup" class="hidden">
+    <div id="popup-closer">X</div>
+    <div id="search-container">
+    <form id="search-form">
+      <input type="text" placeholder="Search For A Card">
+      <button type="submit" value="submit">Search Names</button>
+      <button type="button" id="search-text-button">Search Text</button>
+
+    </form>
+
+
+    <div id="search-large-card">
+      <img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=xxx&type=card" id="search-large-img"/>
+    </div>
+
+    <div id="search-results">
+      <h4>Search Results:</h4>
+      <ul>
+      </ul>
+    </div>
+
+    </div>
+  </div>
+
+  <div id="search">
+    <div id="search-link">Card Search</div>
+  </div>
   <img id="large-card" alt="placeholder" src="http://gatherer.wizards.com/Handlers/Image.ashx?name=xxx&type=card">
   <h3 id="colorless">Colorless</h3>
   <ul>
@@ -682,6 +709,6 @@
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Broodmate%20Dragon"><img src="http://magiccards.info/scans/en/mbp/19.jpg" alt="Broodmate Dragon"></a></li>
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Scion%20of%20the%20Ur-Dragon"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Scion%20of%20the%20Ur-Dragon&amp;set=TSP&amp;type=card" alt="Scion of the Ur-Dragon"></a></li>
   </ul>
-  <script src="Jscripts.js"></script>
+  <script src="js/ogscript.js"></script>
 </body>
 </html>
