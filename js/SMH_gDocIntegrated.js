@@ -19,12 +19,18 @@ function makeApiCall() {
     // TODO: Change code below to process the `response` object:
     console.log(response.result);
     var picks = [].concat.apply([], response.result.values).map(pick => { return pick.toLowerCase();}).filter(pick => pick.length);
-    var images = document.querySelectorAll('img'),
+
+    var images = [].concat.apply([], document.querySelectorAll('img')),
+      imageNames = images.map(img => {return img.alt.toLowerCase()}),
       picksCount = 0;
-    for (var i = 2; i < images.length; i++){
-      if(picks.indexOf(images[i].alt.split('%20').join(' ').toLowerCase()) !== -1){
-        images[i].style.opacity = 0.4;
+
+    for (var i = 0; i < picks.length; i++){
+      var index = imageNames.indexOf(picks[i]);
+      if(index !== -1){
+        images[indexOf].style.opacity = 0.4;
         picksCount += 1;
+      } else {
+        console.log('Missing pick: ' + picks[i])
       }
     }
 
