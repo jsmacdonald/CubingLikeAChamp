@@ -22,8 +22,8 @@ function makeApiCall() {
     var images = document.querySelectorAll('img'),
       picksCount = 0;
     for (var i = 2; i < images.length; i++){
-      if(picks.indexOf(images[i].alt.toLowerCase()) !== -1){
-        images[i].style.opacity = 0.5;
+      if(picks.indexOf(images[i].alt.split('%20').join(' ').toLowerCase()) !== -1){
+        images[i].style.opacity = 0.4;
         picksCount += 1;
       }
     }
