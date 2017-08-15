@@ -134,3 +134,36 @@ img {
   width: 92px;
   height: 128px;
 }
+
+#header{
+margin:6px;
+padding:6px;
+color:grey;
+background-color:black;
+width:90%;
+height: 40px;
+border-radius: 10px;
+}
+
+#header h1{
+display:inline;
+}
+#header ul {
+   display:inline;
+}
+#header li{
+  display:block;
+}
+
+#header button{
+  display:inline;
+  position: absolute;
+  left: 80%;
+  top: 17px;
+  font-size: 10px
+}
+
+.pushleft {
+  position:relative;
+  left: 40px;
+}

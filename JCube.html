@@ -3,10 +3,22 @@
 <head>
   <meta charset='utf-8'>
   <title>Jason's Cube</title>
-  <link rel="stylesheet" href="Jstyle.css">
+  <link rel="stylesheet" href="css/Jstyle.css">
 </head>
 <body>
   <img id="large-card" alt="placeholder" src="http://gatherer.wizards.com/Handlers/Image.ashx?name=xxx&type=card">
+  
+  <div id = "header">
+    
+    <ul>
+      <li id="picksShownCount">0 Picks Shown</li>
+      <li class = "pushleft" id="picksMadeCount">0 Picks Made</li> 
+    </ul>
+
+    <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
+
+  </div>
+
   <h3 id="colorless">Colorless</h3>
   <ul>
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Everflowing%20Chalice"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Everflowing%20Chalice&amp;set=&amp;type=card" alt="Everflowing Chalice"></a></li>
@@ -682,6 +694,11 @@
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Broodmate%20Dragon"><img src="http://magiccards.info/scans/en/mbp/19.jpg" alt="Broodmate Dragon"></a></li>
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Scion%20of%20the%20Ur-Dragon"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Scion%20of%20the%20Ur-Dragon&amp;set=TSP&amp;type=card" alt="Scion of the Ur-Dragon"></a></li>
   </ul>
-  <script src="Jscripts.js"></script>
+  <script src="js/ogscript.js"></script>
+  <script src="js/Jason_gDocIntegrated.js"></script>
+  <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
 </body>
 </html>

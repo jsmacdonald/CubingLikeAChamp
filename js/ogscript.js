@@ -14,6 +14,7 @@
   output += repeat(20, '=') + '\n';
   output += repeat(20 - total.length, ' ') + total + '\n';
   output += '\n';
+  console.log(output);
 
   var largeCard = document.getElementById('large-card');
   document.body.addEventListener('mouseover', function(event) {
