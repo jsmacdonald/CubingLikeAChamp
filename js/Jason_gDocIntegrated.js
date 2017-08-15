@@ -21,13 +21,13 @@ function makeApiCall() {
     var picks = [].concat.apply([], response.result.values).map(pick => { return pick.toLowerCase();}).filter(pick => pick.length);
 
     var images = [].concat.apply([], document.querySelectorAll('img')),
-      imageNames = images.map(img => {return img.alt.toLowerCase()}),
+      imageNames = images.map(img => {return img.alt.split('%20').join(' ').toLowerCase()}),
       picksCount = 0;
 
     for (var i = 0; i < picks.length; i++){
       var index = imageNames.indexOf(picks[i]);
       if(index !== -1){
-        images[indexOf].style.opacity = 0.4;
+        images[index].style.opacity = 0.4;
         picksCount += 1;
       } else {
         console.log('Missing pick: ' + picks[i])
