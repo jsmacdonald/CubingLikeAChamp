@@ -43,10 +43,51 @@
       height: 310px;
       border-radius: 10px;
     }
+    #header{
+      margin:6px;
+      padding:6px;
+      color:grey;
+      background-color:black;
+      width:90%;
+      height: 40px;
+      border-radius: 10px;
+    }
+
+    #header h1{
+      display:inline;
+    }
+    #header ul {
+      display:inline;
+    }
+    #header li{
+      display:block;
+    }
+
+    #header button{
+      display:inline;
+      position: absolute;
+      left: 80%;
+      top: 17px;
+      font-size: 10px
+    }
+
+    .pushleft {
+      position:relative;
+      left: 40px;
+    }
   </style>
 </head>
 <body>
   <img id="large-card" alt="placeholder" src="http://gatherer.wizards.com/Handlers/Image.ashx?name=xxx&type=card">
+  
+  <div id = "header">    
+    <ul>
+      <li id="picksShownCount">0 Picks Shown</li>
+      <li class = "pushleft" id="picksMadeCount">0 Picks Made</li> 
+    </ul>
+    <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
+  </div>
+
   <h3 id="white">White</h3>
   <ul>
     <li data-checked="true"><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Soldier%20of%20the%20Pantheon"><img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Soldier%20of%20the%20Pantheon&set=&type=card" alt="Soldier%20of%20the%20Pantheon"></a></li>
@@ -788,6 +829,11 @@
         }
       }, false);
     }());
+  </script>
+  <script src="js/SMH_gDocIntegrated.js"></script>
+  <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
   </script>
 </body>
 </html>
