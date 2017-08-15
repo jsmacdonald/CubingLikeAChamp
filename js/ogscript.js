@@ -24,12 +24,4 @@
     }
   }, false);
 
-  var searchLargeCard = document.getElementById('search-large-img');
-  document.body.addEventListener('mouseover', function(event) {
-    if (event.target.tagName === 'IMG') {
-      searchLargeCard.alt = event.target.alt;
-      searchLargeCard.src = event.target.src;
-    }
-  }, false);
-
 }());

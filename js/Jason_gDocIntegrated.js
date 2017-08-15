@@ -38,6 +38,7 @@ function makeApiCall() {
 function initClient() {
   var API_KEY = 'AIzaSyDEEVU1MUCII1XXTDYHbk0XLJUE0y7kJlM';  // TODO: Update placeholder with desired API key.
   var CLIENT_ID = '897548361607-7jnhch2hfc9arpap26ftt3a7sn9f1er5.apps.googleusercontent.com';  // TODO: Update placeholder with desired client ID.
+  var CLIENT_SECRET = 'XG0yMPlVuAbCpRGy-VBJp7u-';
   // TODO: Authorize using one of the following scopes:
   //   'https://www.googleapis.com/auth/drive'
   //   'https://www.googleapis.com/auth/drive.file'
@@ -48,6 +49,7 @@ function initClient() {
   gapi.client.init({
     'apiKey': API_KEY,
     'clientId': CLIENT_ID,
+    'clientSecret': CLIENT_SECRET,
     'scope': SCOPE,
     'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
   }).then(function() {
