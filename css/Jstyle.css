@@ -42,97 +42,12 @@ img {
   border-radius: 10px;
 }
 
-#search-link {
-  border: 2px solid  white;
-  width: 180px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 1.5em;
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  cursor: pointer;
-}
-
-#search {
-  margin: 0 auto;
-}
-
-#search-popup {
-  z-index: 100;
-  background-color: black;
-  width: 90%;
-  height: 500px;
-  position: fixed;
-  top: 5%;
-  left: 5%;
-  right: 5%;
-  border-radius: 5%;
-  padding: 20px;
-}
-
-.hidden {
-  display: none;
-}
-
-#popup-closer{
-  text-align: right;
-  font-size: 2em;
-  cursor: pointer;
-}
-
-#search-form {
-  margin-left: 5%;
-  height: 40px;
-  padding: 5px 0;
-}
-
-#search-form input {
-  border-radius: 5px;
-  height: 30px;
-  font-size: 1.4em;
-}
-
-#search-form button {
-  height: 30px;
-  font-size: 1.2em;
-  border-radius: 5px;
-}
-
-#search-text-button {
-  height: 30px;
-  font-size: 1.2em;
-  border-radius: 5px;
-}
-
-#search-large-card {
-  display: inline-block;
-}
-#search-large-img {
-  width: 223px;
-  height: 310px;
-  border-radius: 10px;
-  margin-top: 30px;
-  margin-left: 5%;
-  display: inline-block;
-}
-
-#search-results {
-  display: inline-block;
-  height: 360px;
-  width: 62%;
-  position: absolute;
-  margin: 30px 0 0 30px;
-  padding: 10px;
-}
-
-#search-results h4 {
-  margin: 0 0 10px 0;
-}
-
-#search-results img {
+#card {
+  display: block;
   width: 92px;
   height: 128px;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
 }
 
 #header{
