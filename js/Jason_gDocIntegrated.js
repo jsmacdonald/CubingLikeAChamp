@@ -1,7 +1,7 @@
 function makeApiCall() {
   var params = {
     // The ID of the spreadsheet to retrieve data from.
-    spreadsheetId: '1fLkL4HPAq31X56BmQXGPVzD0feSSb_fmDxvNXgNL6M8',  // TODO: Update placeholder value.
+    spreadsheetId: '1aAhEnhAXwfKX_KPJhvl5WGiOVQlFka16VUehXHO2-io',  // TODO: Update placeholder value.
     // The A1 notation of the values to retrieve.
     range: 'B4:O43',  // TODO: Update placeholder value.
     // How values should be represented in the output.
@@ -20,7 +20,7 @@ function makeApiCall() {
     console.log(response.result);
     var picks = [].concat.apply([], response.result.values).map(pick => { return pick.toLowerCase();}).filter(pick => pick.length);
 
-    var images = [].concat.apply([], document.querySelectorAll('img')),
+    var images = [].concat.apply([], document.querySelectorAll('img#card')),
       imageNames = images.map(img => {return img.alt.split('%20').join(' ').toLowerCase()}),
       picksCount = 0;
 

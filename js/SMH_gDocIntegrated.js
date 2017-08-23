@@ -20,7 +20,7 @@ function makeApiCall() {
     console.log(response.result);
     var picks = [].concat.apply([], response.result.values).map(pick => { return pick.toLowerCase();}).filter(pick => pick.length);
 
-    var images = [].concat.apply([], document.querySelectorAll('img')),
+    var images = [].concat.apply([], document.querySelectorAll('img#card')),
       imageNames = images.map(img => {return img.alt.split('%20').join(' ').toLowerCase()}),
       picksCount = 0;
 
