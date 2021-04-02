@@ -1,9 +1,9 @@
 function makeApiCall() {
   var params = {
     // The ID of the spreadsheet to retrieve data from.
-    spreadsheetId: '1uXk67d01_hBGLayrfCwx0Mp2txWy0Oj7OmxqWfk9iXc',  // TODO: Update placeholder value.
+    spreadsheetId: '1UOz5n6lblswwqnDv0pYHkZmwlN3RW8mLG7iwsmqP9wo',  // TODO: Update placeholder value.
     // The A1 notation of the values to retrieve.
-    range: 'B4:M43',  // TODO: Update placeholder value.
+    range: 'B3:O42',  // TODO: Update placeholder value.
     // How values should be represented in the output.
     // The default render option is ValueRenderOption.FORMATTED_VALUE.
     // valueRenderOption: '',  // TODO: Update placeholder value.
